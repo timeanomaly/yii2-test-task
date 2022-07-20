@@ -1,1 +1,2 @@
 php yii serve
+@pause

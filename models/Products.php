@@ -53,6 +53,9 @@ class Products extends \yii\db\ActiveRecord
         return $this->hasMany(ProductsComments::className(), ['product_id' => 'id']);
     }
 
+    /**
+     * @return bool
+     */
     public function addComment(ProductsComments $comment)
     {
         $comment->product_id=$this->id;

@@ -85,6 +85,11 @@ a.desc:after {
 
 .products-comments-list .rating-container {float: right}
 .products-comments-list-author_name {color: #2b69aa}
-.products-comments-list-comment {border-left: 10px solid #77bd72;  padding-left: 1em; margin-bottom: 1em}
-.products-comments-list-title {}
+.products-comments-list-comment {margin-bottom: 1em}
+.products-comments-list-title {background: aliceblue;}
 .products-comments-list-title input {display: none}
+.products-comments-list-image {float: left; margin: 0 1em 1em 0;}
+.products-comments-list-comment-body {padding-left: 1em;}
+.products-comments-list nav {clear: both}
+
+.my-section-body {padding: 0 0 1em 1em;}

@@ -21,7 +21,7 @@ use Yii;
 class ProductsComments extends \yii\db\ActiveRecord
 {
 
-    //public $uploaded_image;
+    public $uploaded_file = null;
 
     /**
      * {@inheritdoc}
@@ -45,7 +45,7 @@ class ProductsComments extends \yii\db\ActiveRecord
             ['name', 'match', 'pattern' => '/^[a-zA-Z0-9]+$/'],
             ['email', 'email'],
             ['rating', 'integer', 'min' => 1, 'max' => 5],
-            //['uploaded_image', 'file', 'skipOnEmpty' => false, 'extensions' => ['png', 'jpg', 'gif']],
+            ['uploaded_file', 'file', 'skipOnEmpty' => true, 'extensions' => ['png', 'jpg', 'gif', 'txt']],
         ];
     }
 
@@ -63,7 +63,8 @@ class ProductsComments extends \yii\db\ActiveRecord
             'content' => 'Текст отзыва',
             'advantages' => 'Преимущества',
             'disadvantages' => 'Недостатки',
-            //'uploaded_image' => "Фото"
+            'uploaded_file' => "Фото или текст",
+            //'attachment_path'
         ];
     }
 

@@ -14,11 +14,14 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": ">=5.6.0",
+        "php": "~7.4.0",
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap4": "~2.0.0",
         "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
-        "kartik-v/yii2-widget-rating": "@dev"
+        "kartik-v/yii2-widget-rating": "@dev",
+        "yiisoft/yii2-imagine": "^2.3",
+      "ext-exif": "*",
+        "coderius/yii2-lightbox2-widget": "@dev"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.1.0",
