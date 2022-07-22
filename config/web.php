@@ -43,14 +43,31 @@ $config = [
             ],
         ],
         'db' => $db,
-        /*
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
             'rules' => [
+                'POST <controller:[\w-]+>' => '<controller>/create',
+                '<controller:[\w-]+>s' => '<controller>/index',
+
+                'PUT <controller:[\w-]+>/<id:\d+>'    => '<controller>/update',
+                'DELETE <controller:[\w-]+>/<id:\d+>' => '<controller>/delete',
+                '<controller:[\w-]+>/<id:\d+>'        => '<controller>/view',
+                [
+                    'class' => 'yii\rest\UrlRule',
+                    'controller' => 'api',
+                    'extraPatterns' => [
+                        'GET get-all-authors' => 'get-all-authors',
+                        'GET get-comments-from-ip' => 'get-comments-from-ip',
+                    ],
+                ],
             ],
         ],
-        */
+        'jwt' => [
+            'class' => \sizeg\jwt\Jwt::class,
+            'key' => 'udBK8vBNlfo1UXVTeBnTXVK6iIcyX1lGcCuI5IfQ',  //typically a long random string
+            'jwtValidationData' => \app\components\JwtValidationData::class,
+        ],
     ],
     'params' => $params,
 ];

@@ -4,7 +4,6 @@ namespace app\controllers;
 
 use app\models\Products;
 use app\models\ProductsComments;
-use yii\db\Exception;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;

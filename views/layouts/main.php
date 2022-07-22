@@ -38,7 +38,8 @@ AppAsset::register($this);
         'options' => ['class' => 'navbar-nav'],
         'items' => [
             ['label' => 'Домой', 'url' => ['/site/index']],
-            Yii::$app->user->isGuest ? (
+            ['label' => 'API Test', 'url' => ['/site/api-demo']],
+            /*Yii::$app->user->isGuest ? (
                 ['label' => 'Вход', 'url' => ['/site/login']]
             ) : (
                 '<li>'
@@ -49,7 +50,7 @@ AppAsset::register($this);
                 )
                 . Html::endForm()
                 . '</li>'
-            )
+            )*/
         ],
     ]);
     NavBar::end();
